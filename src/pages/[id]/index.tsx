@@ -1,3 +1,4 @@
+import PostDetail from '@/components/PostDetail';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { PostData } from '@/types/post';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -11,14 +12,15 @@ interface Props {
 }
 
 export default function PostPage({ postData }: Props) {
-  console.log(postData);
   return (
     <>
       <Head>
         <title>{postData.title}</title>
         <meta name="description" content={postData.description} />
       </Head>
-      <main className={inter.className}></main>
+      <main className={inter.className}>
+        <PostDetail postData={postData} />
+      </main>
     </>
   );
 }
