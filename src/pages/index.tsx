@@ -1,9 +1,17 @@
+import { getAllSortedPostsData } from '@/lib/posts';
+import { PostMeta } from '@/types/post';
+import { GetStaticProps } from 'next';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function Home() {
+interface Props {
+  allPostsData: PostMeta[];
+}
+
+export default function Home({ allPostsData }: Props) {
+  console.log(allPostsData);
   return (
     <>
       <Head>
@@ -18,3 +26,13 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = () => {
+  const allPostsData = getAllSortedPostsData();
+
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+};
