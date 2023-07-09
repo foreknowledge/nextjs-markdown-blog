@@ -1,3 +1,4 @@
+import PostList from '@/components/PostList';
 import { getAllSortedPostsData } from '@/lib/posts';
 import { PostMeta } from '@/types/post';
 import { GetStaticProps } from 'next';
@@ -11,7 +12,6 @@ interface Props {
 }
 
 export default function Home({ allPostsData }: Props) {
-  console.log(allPostsData);
   return (
     <>
       <Head>
@@ -22,6 +22,7 @@ export default function Home({ allPostsData }: Props) {
       </Head>
       <main className={inter.className}>
         <h1>Posts</h1>
+        <PostList posts={allPostsData} />
       </main>
     </>
   );
