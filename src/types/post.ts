@@ -7,6 +7,6 @@ export type PostMeta = {
   categories?: string[];
 };
 
-export type Post = PostMeta & {
+export type PostData = PostMeta & {
   contentHtml: string;
 };
