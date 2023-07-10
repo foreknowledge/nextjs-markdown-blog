@@ -1,0 +1,31 @@
+.topInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+}
+
+.categories {
+  color: orange;
+}
+
+.verticalDiv {
+  color: #ccc;
+  margin: 0 10px;
+}
+
+.date {
+  color: gray;
+}
+
+.title {
+  margin: 0.5em 0;
+}
+
+.description {
+  margin: 10px 0;
+}
+
+.tags {
+  margin-top: 1em;
+}

@@ -1,10 +1,11 @@
-import PostList from '@/components/post-list/PostList';
+import PostItem from '@/components/post-item/PostItem';
 import { getAllSortedPostsData } from '@/lib/posts';
 import styles from '@/styles/home.module.css';
 import { PostMeta } from '@/types/post';
 import { GetStaticProps } from 'next';
 import { Jua } from 'next/font/google';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const jua = Jua({ subsets: ['latin'], weight: ['400'] });
 
@@ -31,7 +32,15 @@ export default function Home({ allPostsData }: Props) {
           <h1 className={styles.title}>{metadata.title}</h1>
           <h3 className={styles.description}>{metadata.description}</h3>
         </header>
-        <PostList posts={allPostsData} />
+        <ul>
+          {allPostsData.map((post) => (
+            <Link href={`/${post.id}`}>
+              <li key={post.id} className={styles.postItem}>
+                <PostItem post={post} />
+              </li>
+            </Link>
+          ))}
+        </ul>
       </main>
     </>
   );

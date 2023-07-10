@@ -18,3 +18,8 @@
 .description {
   margin-bottom: 0.5em;
 }
+
+.postItem {
+  padding: 2em 1em;
+  border-top: 1px solid #eee;
+}
