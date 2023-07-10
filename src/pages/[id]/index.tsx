@@ -1,4 +1,4 @@
-import PostDetail from '@/components/PostDetail';
+import PostDetail from '@/components/post-detail/PostDetail';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { PostData } from '@/types/post';
 import { GetStaticPaths, GetStaticProps } from 'next';

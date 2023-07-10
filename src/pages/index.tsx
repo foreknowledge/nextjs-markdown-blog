@@ -1,4 +1,4 @@
-import PostList from '@/components/PostList';
+import PostList from '@/components/post-list/PostList';
 import { getAllSortedPostsData } from '@/lib/posts';
 import { PostMeta } from '@/types/post';
 import { GetStaticProps } from 'next';
