@@ -2,7 +2,9 @@
 title: CSR / SSR with Next.js
 date: '2023-07-03'
 description: Next.js로 알아보는 CSR과 SSR.
-category:
+categories:
+  - Frontend
+  - Next.js
 tags:
   - CSR
   - SSR

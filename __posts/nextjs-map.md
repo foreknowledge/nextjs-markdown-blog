@@ -2,9 +2,6 @@
 title: Next.js Map
 date: '2023-07-07'
 description: Next.js로 지도 서비스 만들기
-categories:
-  - Frontend
-  - Next.js
 tags:
   - next.js
   - naver-map

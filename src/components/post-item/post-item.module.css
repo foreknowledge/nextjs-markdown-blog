@@ -6,6 +6,8 @@
 
   .categories {
     color: orange;
+    font-weight: bold;
+    font-size: 1.2em;
   }
 
   .verticalDiv {
