@@ -1,4 +1,5 @@
 import { PostMeta } from '@/types/post';
+import ChipList from '../chip/ChipList';
 import styles from './post-item.module.css';
 
 interface Props {
@@ -17,7 +18,11 @@ export default function PostItem({ post }: Props) {
       </div>
       <h2 className={styles.title}>{post.title}</h2>
       <div className={styles.description}>{post?.description}</div>
-      <div className={styles.tags}>{post.tags?.join(', ')}</div>
+      {post.tags && (
+        <div className={styles.tags}>
+          <ChipList textList={post.tags} />
+        </div>
+      )}
     </>
   );
 }
