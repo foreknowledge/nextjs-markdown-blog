@@ -1,12 +1,12 @@
 import PostList from '@/components/post-list/PostList';
 import { getAllSortedPostsData } from '@/lib/posts';
+import styles from '@/styles/home.module.css';
 import { PostMeta } from '@/types/post';
 import { GetStaticProps } from 'next';
-import { Inter } from 'next/font/google';
+import { Jua } from 'next/font/google';
 import Head from 'next/head';
-import styles from '@/styles/home.module.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const jua = Jua({ subsets: ['latin'], weight: ['400'] });
 
 const metadata = {
   title: 'Next.js Blog',
@@ -26,8 +26,8 @@ export default function Home({ allPostsData }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.container} ${inter.className}`}>
-        <header className={styles.header}>
+      <main className={styles.container}>
+        <header className={`${styles.header} ${jua.className}`}>
           <h1 className={styles.title}>{metadata.title}</h1>
           <h3 className={styles.description}>{metadata.description}</h3>
         </header>

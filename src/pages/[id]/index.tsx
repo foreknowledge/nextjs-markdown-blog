@@ -2,10 +2,7 @@ import PostDetail from '@/components/post-detail/PostDetail';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import { PostData } from '@/types/post';
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { Inter } from 'next/font/google';
 import Head from 'next/head';
-
-const inter = Inter({ subsets: ['latin'] });
 
 interface Props {
   postData: PostData;
@@ -18,7 +15,7 @@ export default function PostPage({ postData }: Props) {
         <title>{postData.title}</title>
         <meta name="description" content={postData.description} />
       </Head>
-      <main className={inter.className}>
+      <main>
         <PostDetail postData={postData} />
       </main>
     </>
