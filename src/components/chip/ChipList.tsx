@@ -10,7 +10,7 @@ const ChipList = ({ textList, onChipClick = () => {} }: Props) => {
   return (
     <ul className={styles.chipList}>
       {textList.map((text) => (
-        <Chip text={text} onChipClick={onChipClick} />
+        <Chip key={text} text={text} onChipClick={onChipClick} />
       ))}
     </ul>
   );

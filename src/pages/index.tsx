@@ -34,8 +34,8 @@ export default function Home({ allPostsData }: Props) {
         </header>
         <ul>
           {allPostsData.map((post) => (
-            <Link href={`/${post.id}`}>
-              <li key={post.id} className={styles.postItem}>
+            <Link key={post.id} href={`/${post.id}`}>
+              <li className={styles.postItem}>
                 <PostItem post={post} />
               </li>
             </Link>
