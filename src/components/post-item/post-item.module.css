@@ -3,19 +3,19 @@
   align-items: center;
   margin-bottom: 15px;
   font-size: 0.85rem;
-}
 
-.categories {
-  color: orange;
-}
+  .categories {
+    color: orange;
+  }
 
-.verticalDiv {
-  color: #ccc;
-  margin: 0 10px;
-}
+  .verticalDiv {
+    color: #ccc;
+    margin: 0 10px;
+  }
 
-.date {
-  color: gray;
+  .date {
+    color: gray;
+  }
 }
 
 .title {
