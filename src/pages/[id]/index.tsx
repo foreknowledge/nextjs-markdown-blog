@@ -22,9 +22,9 @@ export default function PostPage({ postData }: Props) {
       </Head>
       <main>
         <section className={styles.navBar}>
-          <button className={styles.btnGoHome}>
-            <Link href="/">← Home</Link>
-          </button>
+          <Link href="/" className={styles.btnGoHome}>
+            <span>← Home</span>
+          </Link>
         </section>
         <section className={styles.contentsWrapper}>
           <header className={`${styles.header} ${jua.className}`}>
