@@ -8,6 +8,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  padding-bottom: 4em;
 }
 
 a {
@@ -25,4 +26,54 @@ h1 {
   font-size: 2em;
   font-weight: 700;
   margin-bottom: 0.5em;
+}
+
+/* markdown contents styling */
+
+.md-contents {
+  line-height: 2;
+}
+
+.md-contents h1,
+.md-contents h2,
+.md-contents h3,
+.md-contents h4,
+.md-contents h5,
+.md-contents h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  padding: 2em;
+  margin: 1em 0;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+pre code {
+  line-height: 1.6;
+}
+
+code:not(pre code) {
+  background-color: #eee;
+  padding: 0.25em 0.5em;
+  border-radius: 4px;
+}
+
+.md-contents a {
+  color: darkorange;
+}
+
+.md-contents ol,
+.md-contents ul {
+  padding: revert;
+  margin: revert;
+}
+
+.md-contents li {
+  list-style: unset;
+  padding: unset;
+  margin: revert;
 }

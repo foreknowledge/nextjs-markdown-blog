@@ -36,7 +36,7 @@ export default function PostPage({ postData }: Props) {
               </div>
             )}
           </header>
-          <div className={styles.contents}>
+          <div className="md-contents">
             <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
           </div>
         </section>
