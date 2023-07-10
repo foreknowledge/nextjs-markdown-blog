@@ -1,0 +1,41 @@
+.navBar {
+  padding: 1em;
+
+  .btnGoHome {
+    padding: 0.5em 1em;
+    border: 2px dashed orange;
+    border-radius: 4px;
+    background-color: #fff;
+    color: orange;
+    text-decoration: none;
+  }
+}
+
+.contentsWrapper {
+  max-width: 768px;
+  margin: auto;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2em 1.5em 3em;
+
+    .title {
+      margin-bottom: 0.5em;
+    }
+
+    .date {
+      color: gray;
+    }
+
+    .tags {
+      margin-top: 1em;
+    }
+  }
+
+  .contents {
+    padding: 2em 1em;
+  }
+}
