@@ -1,8 +1,6 @@
 import ChipList from '@/components/chip/ChipList';
 import { getAllPostIds, getPostData } from '@/lib/posts';
 import styles from '@/styles/post.module.css';
-import { PostData } from '@/types/post';
-import { GetStaticPaths, GetStaticProps } from 'next';
 import { Jua } from 'next/font/google';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -10,10 +8,12 @@ import Link from 'next/link';
 const jua = Jua({ subsets: ['latin'], weight: '400' });
 
 interface Props {
-  postData: PostData;
+  params: { id: string };
 }
 
-export default function PostPage({ postData }: Props) {
+export default async function PostPage({ params }: Props) {
+  const postData = await getPostData(params.id);
+
   return (
     <>
       <Head>
@@ -45,23 +45,6 @@ export default function PostPage({ postData }: Props) {
   );
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
-  const paths = getAllPostIds();
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps<Props, { id: string }> = async ({
-  params,
-}) => {
-  const postData = await getPostData(params!.id);
-
-  return {
-    props: {
-      postData,
-    },
-  };
-};
+export async function generateStaticParams() {
+  return getAllPostIds();
+}

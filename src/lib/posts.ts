@@ -23,16 +23,12 @@ export function getAllSortedPostsData(): PostMeta[] {
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export function getAllPostIds(): { params: { id: string } }[] {
+export function getAllPostIds(): { id: string }[] {
   const fileNames = fs.readdirSync(postsDir);
 
-  return fileNames.map((fileName) => {
-    return {
-      params: {
-        id: fileName.replace(/\.md$/, ''),
-      },
-    };
-  });
+  return fileNames.map((fileName) => ({
+    id: fileName.replace(/\.md$/, ''),
+  }));
 }
 
 export async function getPostData(id: string): Promise<PostData> {
