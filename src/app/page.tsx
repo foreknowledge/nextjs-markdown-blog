@@ -9,9 +9,6 @@ const jua = Jua({ subsets: ['latin'], weight: ['400'] });
 export const metadata = {
   title: 'Next.js Blog',
   description: 'Next.js로 만든 블로그 입니다 :)',
-  icons: {
-    icon: '/favicon.ico',
-  },
 };
 
 export default function Home() {

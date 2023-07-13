@@ -18,9 +18,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: postData.title,
     description: postData.description,
-    icons: {
-      icon: '/favicon.ico',
-    },
   };
 }
 
